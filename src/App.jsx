@@ -7,7 +7,7 @@ import Contact from "./pages/Contact";
 import ChatBot from "./components/ChatBot";
 import Skills from "./components/Skills";
 import RainThunder from "./components/RainThunder";
-
+import Blob from "./components/Blog"
 function App() {
   return (
     <div
@@ -25,6 +25,7 @@ function App() {
         <Hero />
         <Skills />
         <About />
+        <Blob/>
         <Projects />
         <Contact />
         <Footer />

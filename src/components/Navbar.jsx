@@ -23,7 +23,7 @@ export default function Navbar() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, [scrollY]);
 
-    const menuItems = ["home", "skills", "about", "projects", "contact"];
+    const menuItems = ["home", "skills", "about","blog", "projects", "contact"];
 
     return (
         <nav
