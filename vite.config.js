@@ -1,8 +1,11 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
-// https://vite.dev/config/
+
+// Set base depending on where you deploy
+// For GitHub Pages, replace 'my-portfolio' with your repo name
+const BASE_URL = process.env.DEPLOY_ENV === 'GH_PAGES' ? '/my-portfolio/' : '/'
+
 export default defineConfig({
-  plugins: [tailwindcss(), react()],
-  base: '/my-portfolio/',
+  plugins: [react()],
+  base: BASE_URL,
 })
