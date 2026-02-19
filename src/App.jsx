@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import About from "./pages/About";
-import Projects from "./pages/Projects";
+import Projects from "./pages/Projects"; // Removed AOS wrapper from here
 import Contact from "./pages/Contact";
 import ChatBot from "./components/ChatBot";
 import Skills from "./components/Skills";
@@ -16,15 +16,13 @@ import Blob from "./components/Blog";
 function App() {
 
   useEffect(() => {
-    // --- AOS INITIALIZATION ---
     AOS.init({
-      duration: 1000,       // Duration of animations in milliseconds
-      easing: 'ease-in-out', // Smooth easing function
-      once: false,          // Animations happen every time you scroll (down or up)
-      mirror: true,         // Fades/Slides out when scrolling back up
-      anchorPlacement: 'top-bottom', // Triggers when top of element hits bottom of viewport
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: false,
+      mirror: true,
+      anchorPlacement: 'top-bottom',
     });
-    // Refresh AOS calculation on load
     AOS.refresh();
   }, []);
 
@@ -38,11 +36,9 @@ function App() {
     >
       <RainThunder />
 
-      {/* Dark overlay for contrast */}
       <div className="bg-black/60 min-h-screen text-white relative z-10 overflow-x-hidden">
         <Navbar />
 
-        {/* --- Content Sections with AOS Attributes --- */}
         <div data-aos="fade-down" data-aos-delay="100">
           <Hero />
         </div>
@@ -59,9 +55,8 @@ function App() {
           <Blob />
         </div>
 
-        <div data-aos="zoom-in" data-aos-delay="500">
-          <Projects />
-        </div>
+        {/* --- Projects Section: AOS Wrapper Removed --- */}
+        <Projects />
 
         <div data-aos="flip-up" data-aos-delay="600">
           <Contact />
