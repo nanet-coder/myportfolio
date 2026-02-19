@@ -14,7 +14,7 @@ function App() {
       className="bg-fixed bg-cover bg-center min-h-screen relative"
       style={{
         backgroundImage:
-          "url('https://i.pinimg.com/736x/88/54/f6/8854f6eaf72165815cbd5734af19c510.jpg')",
+          "url('https://i.pinimg.com/736x/cf/ba/5e/cfba5e4691a171b450dfd59adc4a5d59.jpg')",
       }}
     >
       <RainThunder /> {/* Add rain and thunder effect */}
